@@ -13,8 +13,6 @@ with col2:
     content = """"
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ultrices lectus libero, at pellentesque ex laoreet ac. Sed pellentesque diam nec ipsum volutpat cursus. Suspendisse quis lectus mauris. Phasellus nibh elit, imperdiet ut orci sit amet, laoreet consectetur nibh. Integer sit amet ante at orci posuere fringilla. In ex erat, dignissim molestie aliquet eu, lobortis consequat odio. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum efficitur dignissim bibendum. 
     Praesent feugiat turpis et eleifend venenatis. 
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ultrices lectus libero, at pellentesque ex laoreet ac. Sed pellentesque diam nec ipsum volutpat cursus. Suspendisse quis lectus mauris. Phasellus nibh elit, imperdiet ut orci sit amet, laoreet consectetur nibh. Integer sit amet ante at orci posuere fringilla. In ex erat, dignissim molestie aliquet eu, lobortis consequat odio. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum efficitur dignissim bibendum. 
-    Praesent feugiat turpis et eleifend venenatis. 
     """
 
     st.info(content)
@@ -31,7 +29,7 @@ with col3:
         if index<10:
             st.header(row["title"])
             st.write(row["description"])
-            st.image(f"images/{index+1}.png")
+            st.image(f"images/{row['image']}")
             st.write(f"[Source Code]({row['url']})")
 
 with col4:
@@ -40,5 +38,5 @@ with col4:
         if index>9:
             st.header(row["title"])
             st.write(row["description"])
-            st.image(f"images/{index+1}.png")
+            st.image(f"images/{row['image']}")
             st.write(f"[Source Code]({row['url']})")
